@@ -10,6 +10,7 @@ public class Configuracoes {
     }
     public static Configuracoes getInstance(){
         if(instance == null){
+            // garante que seja thread safe
             synchronized (Configuracoes.class){
                 if (instance ==null){
                     instance = new Configuracoes();
